@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiattisak Chaosri — IT Portfolio</title>
+
+<!-- Prompt Font -->
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    background: linear-gradient(180deg, #0f172a, #020617);
+    /* background: linear-gradient(180deg, #616161, #c7c7c7); */
+    color: #e5e7eb;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(2,6,23,0.85);
+    backdrop-filter: blur(8px);
+    padding: 14px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid #1f2937;
+}
+
+nav .logo {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #38bdf8;
+}
+
+nav a {
+    color: #cbd5f1;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 14px;
+}
+
+/* .lang-toggle {
+  background: #38bdf8;
+  color: #020617;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+} */
+.lang-toggle {
+    background: transparent;
+    border: 1px solid #38bdf8;
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.lang-toggle img {
+    width: 26px;
+    height: 18px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+}
+
+
+
+header {
+    padding: 90px 20px 70px;
+    text-align: center;
+    background: radial-gradient(circle at top, #1d4ed8, #020617 70%);
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #38bdf8;
+    margin-bottom: 18px;
+    background: #020617;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+header h2 {
+    margin: 10px 0 0;
+    font-weight: 400;
+    color: #c7d2fe;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: #38bdf8;
+    color: #020617;
+    font-size: 14px;
+    font-weight: 600;
+    }
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.section h3 {
+    font-size: 26px;
+    margin-bottom: 26px;
+    color: #38bdf8;
+}
+
+.card {
+    background: linear-gradient(145deg,#020617,#020617 60%,#0b1220);
+    border: 1px solid #1f2937;
+    border-radius: 16px;
+    padding: 26px;
+    margin-bottom: 22px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 20px;
+}
+
+.skill {
+    background: #020617;
+    border: 1px solid #1f2937;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.skill b { 
+    color: #7dd3fc; 
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tech span {
+    display: inline-block;
+    background: #1f2937;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    margin: 4px 6px 0 0;
+}
+
+.timeline {
+    border-left: 2px solid #1f2937;
+    padding-left: 20px;
+}
+
+.timeline-item { 
+    margin-bottom: 26px; 
+}
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    color: #94a3b8;
+    border-top: 1px solid #1f2937;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: #38bdf8;
+    color: #020617;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.th { 
+    display: none; 
+}
+
+body.th-mode .th { 
+    display: block; 
+}
+
+body.th-mode .en { 
+    display: none; 
+}
+
+.project-card {
+  cursor: pointer;
+}
+
+.project-detail {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.project-card.open .project-detail {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 16px;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 12px;
+  border: 1px solid #1f2937;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: auto;              /* สำคัญ — ไม่บีบสัดส่วน */
+  object-fit: contain;       /* แสดงเต็มรูป */
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  padding: 6px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.02);
+  border-color: #38bdf8;
+}
+
+
+.more-images {
+  display: none;
+  grid-column: span 2;
+}
+
+.more-images.show {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.show-more-btn {
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.show-more-btn {
+    font-family: 'Prompt', sans-serif;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">PORTFOLIO</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <button class="lang-toggle" onclick="toggleLang()" id="langBtn">
+  <img src="th.png" id="langFlag" alt="lang" />
+</button>
+
+  </div>
+</nav>
+
+<header>
+    <!-- 🔽 ใส่รูปโปรไฟล์คุณแทน profile.jpg -->
+    <img src="profile.jpg" class="profile-img">
+
+    <h1 class="en">Kiattisak Chaosri</h1>
+    <h1 class="th">เกียรติศักดิ์ ชาวศรี</h1>
+
+    <h2 class="en">IT Application & Infrastructure Support</h2>
+    <h2 class="th">เจ้าหน้าที่ไอที และพัฒนาระบบภายในองค์กร</h2>
+
+    <div class="badge en">System Builder • Internal Developer • IT Operations</div>
+    <div class="badge th">พัฒนาระบบ • ดูแลโครงสร้าง IT • ปรับปรุงงานดิจิทัล</div>
+</header>
+
+<section class="section" id="about">
+    <h3 class="en">About Me</h3>
+    <h3 class="th">เกี่ยวกับฉัน</h3>
+
+    <div class="card en">
+        IT professional with 3+ years of experience in internal web application development and enterprise IT infrastructure support. Specialized in PHP/MySQL workflow systems and automation.
+    </div>
+
+    <div class="card th">
+        ผู้เชี่ยวชาญด้าน IT มีประสบการณ์มากกว่า 3 ปี ในการพัฒนาระบบ Web Aplication ภายในองค์กร และดูแลโครงสร้างพื้นฐาน IT เชี่ยวชาญระบบ PHP/MySQL และระบบ workflow อัตโนมัติ
+    </div>
+</section>
+
+<section class="section" id="skills">
+    <h3 class="en">Technical Skills</h3>
+    <h3 class="th">ทักษะทางเทคนิค</h3>
+
+    <div class="grid">
+        <div class="skill"><b>Programming</b><br>PHP, JavaScript, HTML, CSS</div>
+        <div class="skill"><b>Database</b><br>MySQL, SQL</div>
+        <div class="skill"><b>BI</b><br>Power BI</div>
+        <div class="skill"><b>Infrastructure</b><br>Server, Network, Backup</div>
+        <div class="skill"><b>Tools</b><br>Git, VS Code, mPDF</div>
+        <div class="skill"><b>Support</b><br>Helpdesk, Troubleshooting</div>
+    </div>
+</section>
+
+<section class="section" id="projects">
+    <h3>Projects</h3>
+
+    <!-- <div class="card">
+        <div class="project-title">IT Helpdesk System</div>
+        <div class="en">Internal ticket and approval workflow system.</div>
+        <div class="th">ระบบแจ้งซ่อมและอนุมัติภายในองค์กร</div>
+        <div class="tech">
+            <span>PHP</span><span>MySQL</span><span>Email Automation</span>
+        </div>
+    </div> -->
+    <div class="card project-card" onclick="toggleProject(this)">
+
+        <div class="project-title">
+            IT Helpdesk System ▼
+        </div>
+
+        <div class="en">Internal ticket and approval workflow system.</div>
+        <div class="th">ระบบแจ้งซ่อมและอนุมัติภายในองค์กร</div>
+
+        <div class="tech">
+            <span>PHP</span><span>MySQL</span><span>Email Automation</span>
+        </div>
+
+        <!-- DROPDOWN DETAIL -->
+        <div class="project-detail">
+            <div class="en">
+                <ul>
+                    <li>Multi-level approval workflow</li>
+                    <li>Email notification automation</li>
+                    <li>Status tracking dashboard</li>
+                    <li>PDF job report export</li>
+                </ul>
+            </div>
+
+            <div class="th">
+                <ul>
+                    <li>ระบบอนุมัติหลายขั้นตอน</li>
+                    <li>แจ้งเตือนทางอีเมลอัตโนมัติ</li>
+                    <li>Dashboard ติดตามสถานะงาน</li>
+                    <li>Export รายงาน PDF</li>
+                </ul>
+            </div>
+            <div class="project-gallery">
+                <img src="it-helpdesk1.png">
+                <img src="pass1.png">
+
+                <!-- hidden images -->
+                <div class="more-images">
+                    <img src="it-helpdesk5.png">
+                    <img src="it-helpdesk6.png">
+                </div>
+            </div>
+            <button class="show-more-btn en" onclick="toggleMore(event, this)">
+                Show More
+            </button>
+
+            <button class="show-more-btn th" onclick="toggleMore(event, this)">
+                แสดงเพิ่มเติม
+            </button>
+
+            <!-- <a href="#" class="btn" onclick="event.stopPropagation()">View Demo</a> -->
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="project-title">Inventory Control</div>
+        <div class="en">Spare part stock and serial tracking.</div>
+        <div class="th">ระบบควบคุมสต็อกและ Serial Number</div>
+        <div class="tech">
+            <span>Inventory</span><span>Dashboard</span><span>SQL</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="project-title">Power BI Dashboard</div>
+        <div class="en">Budget and KPI dashboard.</div>
+        <div class="th">Dashboard งบประมาณและ KPI</div>
+        <div class="tech">
+            <span>Power BI</span><span>DAX</span><span>Data Model</span>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="experience">
+    <h3 class="en">Experience</h3>
+    <h3 class="th">ประสบการณ์ทำงาน</h3>
+
+    <div class="card timeline">
+
+        <div class="timeline-item">
+            <b>IT Staff — Furukawa Automotive Systems</b><br>
+            <p class="en">2022–Present</p>
+            <p class="th">2565–ปัจจุบัน</p>
+            <ul>
+                <li class="en">Develop internal web applications</li>
+                <li class="th">พัฒนาแอปพลิเคชันเว็บภายในองค์กร</li>
+                <li class="en">Maintain servers and networks</li>
+                <li class="th">ดูแลรักษาเซิร์ฟเวอร์และเครือข่าย</li>
+                <li class="en">Support 180+ users</li>
+                <li class="th">รองรับผู้ใช้งานมากกว่า 180 ราย</li>
+                <li class="en">Manage backup and monitoring systems</li>
+                <li class="th">จัดการระบบสำรองข้อมูลและตรวจสอบ</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <b>Assistant Programmer — EsarnDotCom</b><br>
+            <p class="en">2021–2022</p>
+            <p class="th">2564–2565</p>
+            <ul>
+                <li class="en">Website development and design</li>
+                <li class="th">การพัฒนาและออกแบบเว็บไซต์</li>
+                <li class="en">Software development support</li>
+                <li class="th">การสนับสนุนการพัฒนาซอฟต์แวร์</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h3 class="en">Contact</h3>
+    <h3 class="th">ติดต่อ</h3>
+    <div class="card">
+        <a class="en" style="color: white" href="mailto:kiattisakch0908@gmail.com">
+            Email: kiattisakch0908@gmail.com
+        </a>
+        <a class="th" style="color: white" href="mailto:kiattisakch0908@gmail.com">
+            อีเมล: kiattisakch0908@gmail.com
+        </a>
+        <p class="en">Phone: 095-4093843</p>
+        <p class="th">โทร: 095-4093843</p>
+        <a class="btn en" href="#">Download Resume (PDF)</a>
+        <a class="btn th" href="#">ดาวน์โหลด ประวัติ (PDF)</a>
+    </div>
+</section>
+
+<div class="footer">© 2026 Kiattisak — Portfolio</div>
+
+<script>
+function toggleLang(){
+    document.body.classList.toggle('th-mode');
+
+    const isTH = document.body.classList.contains('th-mode');
+    localStorage.setItem("lang", isTH ? "th" : "en");
+
+    document.getElementById("langFlag").src = isTH ? "en.png" : "th.png";
+}
+
+window.onload = function(){
+    const lang = localStorage.getItem("lang");
+    if(lang === "th"){
+        document.body.classList.add("th-mode");
+        document.getElementById("langFlag").src = "en.png";
+    }
+}
+</script>
+
+<script>
+    function toggleProject(card){
+
+    document.querySelectorAll('.project-card').forEach(c=>{
+        if(c !== card){
+        c.classList.remove('open');
+        }
+    });
+
+    card.classList.toggle("open");
+}
+
+function toggleMore(e, btn){
+    e.stopPropagation();
+
+    const detail = btn.closest('.project-detail');
+    const more = detail.querySelector('.more-images');
+
+    more.classList.toggle('show');
+
+    if(btn.classList.contains('th')){
+        btn.innerText = more.classList.contains('show')
+            ? "ซ่อน"
+            : "แสดงเพิ่มเติม";
+    } else {
+        btn.innerText = more.classList.contains('show')
+            ? "Show Less"
+            : "Show More";
+    }
+}
+
+
+
+</script>
+
+</body>
+</html>
