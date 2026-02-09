@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
   <head>
     <meta charset="UTF-8" />
@@ -10,9 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css">
-
-    
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
@@ -48,9 +46,9 @@
 
     <section class="section" id="about">
       <h3 data-en="About Me" data-th="เกี่ยวกับฉัน"></h3>
-      <div class="card">
+      <div class="card" style="text-align: center;">
         <p
-          data-en="IT professional with 3+ years of experience in internal web application development and enterprise IT infrastructure support. Specialized in PHP/MySQL workflow systems and automation."
+          data-en="IT professional with 3 years of experience in internal web application development and enterprise IT infrastructure support. Specialized in PHP/MySQL workflow systems and automation."
           data-th="ผู้เชี่ยวชาญด้าน IT มีประสบการณ์มากกว่า 3 ปี ในการพัฒนาระบบ Web Application ภายในองค์กร และดูแลโครงสร้างพื้นฐาน IT เชี่ยวชาญระบบ PHP/MySQL และระบบ workflow อัตโนมัติ"
         ></p>
       </div>
@@ -61,15 +59,35 @@
 
       <div class="grid">
         <div class="skill">
-          <b>Programming</b><br />PHP, JavaScript, HTML, CSS
+          <b>Programming</b>
+          <br />
+          PHP, JavaScript, HTML, CSS
         </div>
-        <div class="skill"><b>Database</b><br />MySQL, SQL</div>
-        <div class="skill"><b>BI</b><br />Power BI</div>
         <div class="skill">
-          <b>Infrastructure</b><br />Server, Network, Backup
+          <b>Database</b>
+          <br />
+          MySQL, SQL
         </div>
-        <div class="skill"><b>Tools</b><br />Git, VS Code, mPDF</div>
-        <div class="skill"><b>Support</b><br />Helpdesk, Troubleshooting</div>
+        <div class="skill">
+          <b>BI</b>
+          <br />
+          Power BI
+        </div>
+        <div class="skill">
+          <b>Infrastructure</b>
+          <br />
+          Server, Network, Backup
+        </div>
+        <div class="skill">
+          <b>Tools</b>
+          <br />
+          Git, VS Code, mPDF
+        </div>
+        <div class="skill">
+          <b>Support</b>
+          <br />
+          Helpdesk, Troubleshooting
+        </div>
       </div>
     </section>
 
@@ -77,11 +95,15 @@
       <h3>Projects</h3>
       <div class="card project-card" onclick="toggleProject(this)">
         <div class="project-title">IT Helpdesk System</div>
-        
         <div
           data-en="Internal ticket and approval workflow system."
           data-th="ระบบแจ้งซ่อมและอนุมัติภายในองค์กร"
         ></div>
+        <div class="project-meta">
+          <span>Role: Full-stack Developer</span>
+          <span>Type: In-house System</span>
+        </div>
+
         <div class="tech">
           <span>PHP</span>
           <span>MySQL</span>
@@ -96,6 +118,45 @@
 
         <!-- DROPDOWN DETAIL -->
         <div class="project-detail">
+          <div class="project-section">
+            <h4 data-en="Problem" data-th="ปัญหา"></h4>
+            <p
+              data-en="The IT task notification process uses paper documents, making it difficult to track task status and also wasteful of natural resources."
+              data-th="การแจ้งงาน IT ใช้การส่งกระกาษเอกสาร ทำให้ติดตามสถานะงานได้ยาก รวมถึงการใช้ทรัพยากรธรรมชาติอย่างสิ้นเปลือง"
+            ></p>
+          </div>
+
+          <div class="project-section">
+            <h4 data-en="Solution" data-th="แนวทางแก้ไข"></h4>
+            <p
+              data-en="Develop a centralized IT task reporting system with approval processes and real-time status tracking, all entirely online."
+              data-th="พัฒนาระบบศูนย์กลางสำหรับแจ้งงาน IT พร้อมขั้นตอนการอนุมัติและติดตามสถานะแบบเรียลไทม์ ผ่านระบบออนไลน์ 100%"
+            ></p>
+          </div>
+
+          <div class="project-section">
+            <h4 data-en="Result" data-th="ผลลัพธ์"></h4>
+            <ul>
+              <li
+                data-en="Reduced request handling time"
+                data-th="ลดระยะเวลาการจัดการคำขอ"
+              ></li>
+              <li
+                data-en="Improved transparency between users and IT team"
+                data-th="เพิ่มความโปร่งใสระหว่างผู้ใช้และทีม IT"
+              ></li>
+            </ul>
+          </div>
+          <div class="project-section">
+            <h4 data-en="My Responsibility" data-th="หน้าที่ที่รับผิดชอบ"></h4>
+            <ul>
+              <li>System design & database structure</li>
+              <li>Backend development (PHP, MySQL)</li>
+              <li>Email automation & approval logic</li>
+              <li>User testing & deployment</li>
+            </ul>
+          </div>
+
           <ul>
             <li
               data-en="Multi-level approval workflow"
@@ -125,6 +186,7 @@
               <img src="it-helpdesk6.png" />
             </div>
           </div>
+
           <button
             class="show-more-btn"
             onclick="toggleMore(event, this)"
@@ -145,7 +207,9 @@
           data-th="ระบบควบคุมสต็อกและ Serial Number"
         ></div>
         <div class="tech">
-          <span>Inventory</span><span>Dashboard</span><span>SQL</span>
+          <span>Inventory</span>
+          <span>Dashboard</span>
+          <span>SQL</span>
         </div>
         <button
           class="detail-btn"
@@ -196,28 +260,46 @@
     </section>
 
     <section class="section" id="experience">
-      <h3 data-en="Experience"
-      data-th="ประสบการณ์ทำงาน"></h3>
+      <h3 data-en="Experience" data-th="ประสบการณ์ทำงาน"></h3>
 
       <div class="card timeline">
         <div class="timeline-item">
-          <b>IT Staff — Furukawa Automotive Systems</b><br />
-          <p data-en="2022–Present"
-          data-th="2565–ปัจจุบัน"></p>
+          <b>IT Staff — Furukawa Automotive Systems</b>
+          <br />
+          <p data-en="2022–Present" data-th="2565–ปัจจุบัน"></p>
           <ul>
-            <li data-en="Develop internal web applications" data-th="พัฒนาแอปพลิเคชันเว็บภายในองค์กร"></li>
-            <li data-en="Maintain servers and networks" data-th="ดูแลรักษาเซิร์ฟเวอร์และเครือข่าย"></li>
-            <li data-en="Support 180+ users" data-th="รองรับผู้ใช้งานมากกว่า 180 ราย"></li>
-            <li data-en="Manage backup and monitoring systems" data-th="จัดการระบบสำรองข้อมูลและตรวจสอบ"></li>
+            <li
+              data-en="Develop internal web applications"
+              data-th="พัฒนาแอปพลิเคชันเว็บภายในองค์กร"
+            ></li>
+            <li
+              data-en="Maintain servers and networks"
+              data-th="ดูแลรักษาเซิร์ฟเวอร์และเครือข่าย"
+            ></li>
+            <li
+              data-en="Support 180+ users"
+              data-th="รองรับผู้ใช้งานมากกว่า 180 ราย"
+            ></li>
+            <li
+              data-en="Manage backup and monitoring systems"
+              data-th="จัดการระบบสำรองข้อมูลและตรวจสอบ"
+            ></li>
           </ul>
         </div>
 
         <div class="timeline-item">
-          <b>Assistant Programmer — EsarnDotCom</b><br />
+          <b>Assistant Programmer — EsarnDotCom</b>
+          <br />
           <p data-en="2021–2022" data-th="2564–2565"></p>
           <ul>
-            <li data-en="Website development and design" data-th="การพัฒนาและออกแบบเว็บไซต์"></li>
-            <li data-en="Software development support" data-th="การสนับสนุนการพัฒนาซอฟต์แวร์"></li>
+            <li
+              data-en="Website development and design"
+              data-th="การพัฒนาและออกแบบเว็บไซต์"
+            ></li>
+            <li
+              data-en="Software development support"
+              data-th="การสนับสนุนการพัฒนาซอฟต์แวร์"
+            ></li>
           </ul>
         </div>
       </div>
@@ -227,14 +309,18 @@
       <h3 data-en="Contact" data-th="ติดต่อ"></h3>
       <div class="card">
         <a
-          data-en="Email: kiattisakch0908@gmail.com" data-th="อีเมล: kiattisakch0908@gmail.com"
-          style="color: white"
+          data-en="Email: kiattisakch0908@gmail.com"
+          data-th="อีเมล: kiattisakch0908@gmail.com"
+          style="color: white;"
           href="mailto:kiattisakch0908@gmail.com"
-        >
-          
-        </a>
+        ></a>
         <p data-en="Phone: 095-4093843" data-th="โทร: 095-4093843"></p>
-        <a class="btn" data-en="Download Resume (PDF)" data-th="ดาวน์โหลด ประวัติ (PDF)" href="#"></a>
+        <a
+          class="btn"
+          data-en="Download Resume (PDF)"
+          data-th="ดาวน์โหลด ประวัติ (PDF)"
+          href="#"
+        ></a>
       </div>
     </section>
 
@@ -242,90 +328,85 @@
 
     <script>
       function toggleLang() {
-        document.body.classList.toggle("th-mode");
+        document.body.classList.toggle('th-mode')
 
-        const isTH = document.body.classList.contains("th-mode");
-        localStorage.setItem("lang", isTH ? "th" : "en");
+        const isTH = document.body.classList.contains('th-mode')
+        localStorage.setItem('lang', isTH ? 'th' : 'en')
 
-        document.getElementById("langFlag").src = isTH
-          ? "icon/en.png"
-          : "icon/th.png";
+        document.getElementById('langFlag').src = isTH
+          ? 'icon/en.png'
+          : 'icon/th.png'
       }
 
       window.onload = function () {
-        const lang = localStorage.getItem("lang");
-        if (lang === "th") {
-          document.body.classList.add("th-mode");
-          document.getElementById("langFlag").src = "icon/en.png";
+        const lang = localStorage.getItem('lang')
+        if (lang === 'th') {
+          document.body.classList.add('th-mode')
+          document.getElementById('langFlag').src = 'icon/en.png'
         }
-      };
+      }
     </script>
 
     <script>
       function toggleProject(card) {
-        document.querySelectorAll(".project-card").forEach((c) => {
+        document.querySelectorAll('.project-card').forEach((c) => {
           if (c !== card) {
-            c.classList.remove("open");
+            c.classList.remove('open')
           }
-        });
+        })
 
-        card.classList.toggle("open");
+        card.classList.toggle('open')
       }
 
       function toggleMore(e, btn) {
-        e.stopPropagation();
+        e.stopPropagation()
 
-        const detail = btn.closest(".project-detail");
-        const more = detail.querySelector(".more-images");
+        const detail = btn.closest('.project-detail')
+        const more = detail.querySelector('.more-images')
 
-        more.classList.toggle("show");
+        more.classList.toggle('show')
 
-        if (btn.classList.contains("th")) {
-          btn.innerText = more.classList.contains("show")
-            ? "ซ่อน"
-            : "แสดงเพิ่มเติม";
+        if (btn.classList.contains('th')) {
+          btn.innerText = more.classList.contains('show')
+            ? 'ซ่อน'
+            : 'แสดงเพิ่มเติม'
         } else {
-          btn.innerText = more.classList.contains("show")
-            ? "Show Less"
-            : "Show More";
+          btn.innerText = more.classList.contains('show')
+            ? 'Show Less'
+            : 'Show More'
         }
       }
-    //   function toggleProject(e, btn) {
-    //     e.stopPropagation();
+      //   function toggleProject(e, btn) {
+      //     e.stopPropagation();
 
-    //     const card = btn.closest(".project-card");
+      //     const card = btn.closest(".project-card");
 
-    //     document.querySelectorAll(".project-card").forEach((c) => {
-    //       if (c !== card) {
-    //         c.classList.remove("open");
-    //       }
-    //     });
+      //     document.querySelectorAll(".project-card").forEach((c) => {
+      //       if (c !== card) {
+      //         c.classList.remove("open");
+      //       }
+      //     });
 
-    //     card.classList.toggle("open");
-    //   }
-    function toggleProject(el, e){
-        if(e){
-            e.stopPropagation();
+      //     card.classList.toggle("open");
+      //   }
+      function toggleProject(el, e) {
+        if (e) {
+          e.stopPropagation()
         }
-        const card = el.classList.contains("project-card")
-            ? el
-            : el.closest(".project-card");
-        
-        document.querySelectorAll('.project-card').forEach(c=>{
-            if(c !== card){
-                c.classList.remove('open');
-            }
-        });
-        
-        card.classList.toggle("open");
-    }
+        const card = el.classList.contains('project-card')
+          ? el
+          : el.closest('.project-card')
 
+        document.querySelectorAll('.project-card').forEach((c) => {
+          if (c !== card) {
+            c.classList.remove('open')
+          }
+        })
+
+        card.classList.toggle('open')
+      }
     </script>
     <!-- <script src="js/main.js"></script> -->
     <script src="js/lang.js"></script>
   </body>
 </html>
-
-
-
-
