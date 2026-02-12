@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
   <head>
     <meta charset="UTF-8" />
@@ -10,6 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -46,10 +51,10 @@
 
     <section class="section" id="about">
       <h3 data-en="About Me" data-th="เกี่ยวกับฉัน"></h3>
-      <div class="card" style="text-align: center;">
+      <div class="card" style="text-align: center">
         <p
-          data-en="IT professional with 3 years of experience in internal web application development and enterprise IT infrastructure support. Specialized in PHP/MySQL workflow systems and automation."
-          data-th="ผู้เชี่ยวชาญด้าน IT มีประสบการณ์มากกว่า 3 ปี ในการพัฒนาระบบ Web Application ภายในองค์กร และดูแลโครงสร้างพื้นฐาน IT เชี่ยวชาญระบบ PHP/MySQL และระบบ workflow อัตโนมัติ"
+          data-en="IT professional with 3 years of experience in internal web application development and enterprise IT support. Specialized in PHP/MySQL workflow and approval systems, process automation, and operational dashboards. Experienced in building in-house platforms such as helpdesk, inventory control, and digital signage systems."
+          data-th="ผู้เชี่ยวชาญด้าน IT มีประสบการณ์ 3 ปี ในการพัฒนาระบบเว็บภายในองค์กรและดูแลโครงสร้างพื้นฐาน IT เชี่ยวชาญระบบ workflow และ approval ด้วย PHP/MySQL การทำระบบอัตโนมัติ และ dashboard รายงานผล พร้อมพัฒนาระบบจริง เช่น Helpdesk, ควบคุมสต็อก และ Digital Signage"
         ></p>
       </div>
     </section>
@@ -59,55 +64,76 @@
 
       <div class="grid">
         <div class="skill">
-          <b>Programming</b>
-          <br />
-          PHP, JavaScript, HTML, CSS
+          <div class="skill-text">
+            <b>Programming</b><br />
+            PHP, JavaScript, HTML, CSS
+          </div>
+          <i class="fa-solid fa-code skill-icon"></i>
         </div>
+
         <div class="skill">
-          <b>Database</b>
-          <br />
-          MySQL, SQL
+          <div class="skill-text">
+            <b>Database</b><br />
+            MySQL, SQL
+          </div>
+          <i class="fa-solid fa-database skill-icon"></i>
         </div>
+
         <div class="skill">
-          <b>BI</b>
-          <br />
-          Power BI
+          <div class="skill-text">
+            <b>Data Analytics</b><br />
+            Power BI, Data Analysis, Reporting
+          </div>
+          <i class="fa-solid fa-magnifying-glass-chart skill-icon"></i>
         </div>
+
         <div class="skill">
-          <b>Infrastructure</b>
-          <br />
-          Server, Network, Backup
+          <div class="skill-text">
+            <b>Infrastructure</b><br />
+            Server, Network, Backup
+          </div>
+          <i class="fa-solid fa-server skill-icon"></i>
         </div>
+
         <div class="skill">
-          <b>Tools</b>
-          <br />
-          Git, VS Code, mPDF
+          <div class="skill-text">
+            <b>Tools</b><br />
+            Git, VS Code, mPDF
+          </div>
+          <i class="fa-solid fa-screwdriver-wrench skill-icon"></i>
         </div>
+
         <div class="skill">
-          <b>Support</b>
-          <br />
-          Helpdesk, Troubleshooting
+          <div class="skill-text">
+            <b>Support</b><br />
+            Helpdesk, Troubleshooting
+          </div>
+          <i class="fa-solid fa-headset skill-icon"></i>
         </div>
       </div>
     </section>
 
     <section class="section" id="projects">
       <h3>Projects</h3>
+      <!-- IT Helpdesk System -->
       <div class="card project-card" onclick="toggleProject(this)">
-        <div class="project-title">IT Helpdesk System</div>
+        <div class="project-title" style="margin-bottom: 10px">
+          IT Helpdesk System
+        </div>
         <div
-          data-en="Internal ticket and approval workflow system."
-          data-th="ระบบแจ้งซ่อมและอนุมัติภายในองค์กร"
+          data-en="Online IT service request and approval system with real-time tracking."
+          data-th="ระบบแจ้งซ่อมและขอรับบริการ IT แบบออนไลน์ พร้อมอนุมัติและติดตามสถานะแบบเรียลไทม์"
         ></div>
         <div class="project-meta">
           <span>Role: Full-stack Developer</span>
-          <span>Type: In-house System</span>
+          <span>Type: In-house Enterprise System</span>
         </div>
 
         <div class="tech">
           <span>PHP</span>
           <span>MySQL</span>
           <span data-en="Email Automation" data-th="ส่งอีเมลอัตโนมัติ"></span>
+          <span>PDF Report</span>
         </div>
         <button
           class="detail-btn"
@@ -119,80 +145,251 @@
         <!-- DROPDOWN DETAIL -->
         <div class="project-detail">
           <div class="project-section">
+            <h4 data-en="Overview" data-th="ภาพรวม"></h4>
+            <ul>
+              <li data-en="A centralized IT helpdesk platform replacing paper-based requests with a fully digital workflow — from request submission to multi-level approval and job tracking."
+                data-th="แพลตฟอร์มศูนย์กลางสำหรับแจ้งงาน IT แทนเอกสารกระดาษ โดยครอบคลุมตั้งแต่การแจ้งงาน การอนุมัติหลายระดับ และการติดตามสถานะงานแบบออนไลน์"
+              ></li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h4 data-en="Key Features" data-th="ความสามารถหลัก"></h4>
+            <ul>
+              <li
+                data-en="Online request form"
+                data-th="ฟอร์มแจ้งงานออนไลน์"
+              ></li>
+              <li
+                data-en="Multi-level approval workflow"
+                data-th="อนุมัติหลายระดับ"
+              ></li>
+              <li
+                data-en="Automatic email notifications"
+                data-th="แจ้งเตือนอีเมลอัตโนมัติ"
+              ></li>
+              <li
+                data-en="Real-time status tracking dashboard"
+                data-th="แดชบอร์ดติดตามสถานะ"
+              ></li>
+              <li
+                data-en="PDF job report export"
+                data-th="ส่งออกรายงาน PDF"
+              ></li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h4 data-en="Impact" data-th="ผลลัพธ์"></h4>
+            <ul>
+              <li
+                data-en="Reduced processing time and paperwork"
+                data-th="ลดเวลาทำงานและลดการใช้เอกสาร"
+              ></li>
+              <li
+                data-en="Improved visibility between users and IT team"
+                data-th="เพิ่มความโปร่งใสระหว่างผู้ใช้และทีม IT"
+              ></li>
+              <li
+                data-en="Better task tracking and audit trail"
+                data-th="ติดตามงานและตรวจสอบย้อนหลังได้"
+              ></li>
+            </ul>
+          </div>
+          <div class="project-section">
+            <h4 data-en="My Responsibilities" data-th="ความรับผิดชอบ"></h4>
+            <ul>
+              <li>System architecture & database design</li>
+              <li>Backend development (PHP / MySQL)</li>
+              <li>Fontend development (HTML / CSS)</li>
+              <li>Approval logic & email automation</li>
+              <li>User testing and production deployment</li>
+            </ul>
+          </div>
+
+          <div class="project-gallery">
+            <img src="images/ithelpdesk-1.png" />
+            <img src="images/ithelpdesk-2.png" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card project-card" onclick="toggleProject(this)">
+        <div class="project-title" style="margin-bottom: 10px">
+          Digital Signage Systems
+        </div>
+        <div
+          data-en="Centralized digital media management using Raspberry Pi instead of N-Computing devices."
+          data-th="ระบบจัดการสื่อ Digital แบบศูนย์กลาง โดยใช้ Raspberry Pi แทน N-Computing"
+        ></div>
+        <div class="project-meta">
+          <span>Role: Full-stack Developer</span>
+          <span>Type: In-house Infrastructure System</span>
+        </div>
+
+        <div class="tech">
+          <span>PHP</span>
+          <span>MySQL</span>
+          <span>HTML/CSS</span>
+          <span>Raspberry Pi</span>
+        </div>
+        <button
+          class="detail-btn"
+          onclick="toggleProject(this, event)"
+          data-en="More Detail"
+          data-th="รายละเอียดเพิ่มเติม"
+        ></button>
+
+        <!-- DETAIL -->
+        <div class="project-detail">
+          <div class="project-section">
+            <h4 data-en="Overview" data-th="ภาพรวม"></h4>
+            <ul>
+              <li
+              data-en="Developed a centralized Digital Signage management system to control and distribute media content to display screens using Raspberry Pi devices, replacing legacy N-Computing solutions."
+              data-th="พัฒนาระบบจัดการ Digital Signage แบบศูนย์กลาง สำหรับควบคุมและกระจายสื่อไปยังหน้าจอแสดงผล โดยใช้ Raspberry Pi แทนอุปกรณ์ N-Computing แบบเดิม"
+            ></li>
+            </ul>
+          </div>
+
+          <div class="project-section">
             <h4 data-en="Problem" data-th="ปัญหา"></h4>
-            <p
-              data-en="The IT task notification process uses paper documents, making it difficult to track task status and also wasteful of natural resources."
-              data-th="การแจ้งงาน IT ใช้การส่งกระกาษเอกสาร ทำให้ติดตามสถานะงานได้ยาก รวมถึงการใช้ทรัพยากรธรรมชาติอย่างสิ้นเปลือง"
-            ></p>
+             <ul>
+              <li
+              data-en="Legacy N-Computing devices had limited flexibility, difficult maintenance, and higher operational constraints for media display control."
+              data-th="ระบบเดิมใช้ N-Computing ซึ่งมีข้อจำกัดด้านความยืดหยุ่น การดูแลรักษายาก และควบคุมการแสดงผลสื่อได้จำกัด"
+            ></li>
+            </ul>
           </div>
 
           <div class="project-section">
             <h4 data-en="Solution" data-th="แนวทางแก้ไข"></h4>
-            <p
-              data-en="Develop a centralized IT task reporting system with approval processes and real-time status tracking, all entirely online."
-              data-th="พัฒนาระบบศูนย์กลางสำหรับแจ้งงาน IT พร้อมขั้นตอนการอนุมัติและติดตามสถานะแบบเรียลไทม์ ผ่านระบบออนไลน์ 100%"
-            ></p>
-          </div>
-
-          <div class="project-section">
-            <h4 data-en="Result" data-th="ผลลัพธ์"></h4>
             <ul>
               <li
-                data-en="Reduced request handling time"
-                data-th="ลดระยะเวลาการจัดการคำขอ"
-              ></li>
-              <li
-                data-en="Improved transparency between users and IT team"
-                data-th="เพิ่มความโปร่งใสระหว่างผู้ใช้และทีม IT"
-              ></li>
-            </ul>
-          </div>
-          <div class="project-section">
-            <h4 data-en="My Responsibility" data-th="หน้าที่ที่รับผิดชอบ"></h4>
-            <ul>
-              <li>System design & database structure</li>
-              <li>Backend development (PHP, MySQL)</li>
-              <li>Email automation & approval logic</li>
-              <li>User testing & deployment</li>
+              data-en="Implemented Raspberry Pi endpoints with a web-based control panel for media upload, scheduling, and remote screen management."
+              data-th="ปรับใช้ Raspberry Pi เป็นอุปกรณ์ปลายทาง พร้อมระบบ Web Control Panel สำหรับอัปโหลดสื่อ ตั้งเวลา และควบคุมหน้าจอจากส่วนกลาง"
+            ></li>
             </ul>
           </div>
 
-          <ul>
-            <li
-              data-en="Multi-level approval workflow"
-              data-th="ขั้นตอนการอนุมัติหลายระดับ"
-            ></li>
-            <li
-              data-en="Email notification automation"
-              data-th="ระบบแจ้งเตือนทางอีเมลอัตโนมัติ"
-            ></li>
-            <li
-              data-en="Status tracking dashboard"
-              data-th="แดชบอร์ดติดตามสถานะ"
-            ></li>
-            <li
-              data-en="PDF job report export"
-              data-th="การส่งออกรายงานงานในรูปแบบ PDF"
-            ></li>
-          </ul>
+          <div class="project-section">
+            <h4 data-en="Key Features" data-th="ความสามารถหลัก"></h4>
+            <ul>
+              <li
+                data-en="Central media upload and management"
+                data-th="อัปโหลดและจัดการสื่อจากศูนย์กลาง"
+              ></li>
+              <li
+                data-en="Screen-based content assignment"
+                data-th="กำหนดสื่อแยกตามหน้าจอ"
+              ></li>
+              <li
+                data-en="Scheduled playback control"
+                data-th="ตั้งเวลาแสดงผลได้"
+              ></li>
+              <li
+                data-en="Remote device control"
+                data-th="ควบคุมอุปกรณ์ระยะไกล"
+              ></li>
+              <li data-en="Lower hardware cost" data-th="ลดต้นทุนอุปกรณ์"></li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h4 data-en="Impact" data-th="ผลลัพธ์"></h4>
+            <ul>
+              <li
+                data-en="Reduced hardware and maintenance cost"
+                data-th="ลดต้นทุนอุปกรณ์และการดูแล"
+              ></li>
+              <li
+                data-en="Easier media update workflow"
+                data-th="อัปเดตสื่อได้ง่ายและรวดเร็ว"
+              ></li>
+              <li
+                data-en="Improved control and flexibility"
+                data-th="ควบคุมและปรับเปลี่ยนได้ยืดหยุ่น"
+              ></li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h4 data-en="My Responsibilities" data-th="ความรับผิดชอบ"></h4>
+            <ul>
+              <li>System design & device architecture</li>
+              <li>Backend development (PHP / MySQL)</li>
+              <li>Frontend dashboard (HTML / CSS)</li>
+              <li>Raspberry Pi configuration & deployment</li>
+              <li>User training & rollout</li>
+            </ul>
+          </div>
 
           <div class="project-gallery">
-            <img src="images/it-helpdesk1.png" />
-            <img src="images/pass1.png" />
+            <img src="images/Digitalsignage-1.png" />
+            <img src="images/Digitalsignage-2.png" />
 
-            <!-- hidden images -->
-            <div class="more-images">
-              <img src="it-helpdesk5.png" />
-              <img src="it-helpdesk6.png" />
-            </div>
+            <!-- <div class="more-images">
+              <img src="images/digital3.png" />
+              <img src="images/digital4.png" />
+            </div> -->
           </div>
 
-          <button
+          <!-- <button
             class="show-more-btn"
             onclick="toggleMore(event, this)"
             data-en="Show More"
             data-th="แสดงเพิ่มเติม"
-          ></button>
+          ></button> -->
+        </div>
+      </div>
+
+      <!-- IT Helpdesk System -->
+      <div class="card project-card" onclick="toggleProject(this)">
+        <div class="project-title" style="margin-bottom: 10px">
+          IT Asset Take-Out Control System
+        </div>
+        <div
+          data-en="Digital Verification and Approval Workflow for Off-Premises IT Assets."
+          data-th="ระบบควบคุม ตรวจสอบ และอนุมัติการนำอุปกรณ์ IT ออกนอกบริษัทแบบดิจิทัล"
+        ></div>
+        <div class="project-meta">
+          <span>Role: Full-stack Developer</span>
+          <span>Type: In-house Enterprise System</span>
+        </div>
+
+        <div class="tech">
+          <span>PHP</span>
+          <span>MySQL</span>
+          <span data-en="Email Automation" data-th="ส่งอีเมลอัตโนมัติ"></span>
+          <span>PDF Report</span>
+        </div>
+        <button
+          class="detail-btn"
+          onclick="toggleProject(this, event)"
+          data-en="More Detail"
+          data-th="รายละเอียดเพิ่มเติม"
+        ></button>
+
+        <!-- DROPDOWN DETAIL -->
+        <div class="project-detail">
+          <div class="project-section">
+            <h4 data-en="Overview" data-th="ภาพรวมการทำงานของระบบ"></h4>
+            <ul>
+              <li data-en="This system was developed to manage and verify requests for taking computers outside the company through a structured digital workflow. It supports multi-level management approval and provides real-time status tracking throughout the approval process."
+                data-th="ระบบนี้ถูกพัฒนาขึ้นเพื่อใช้ตรวจสอบและควบคุมการร้องขอนำคอมพิวเตอร์ออกนอกบริษัท โดยรองรับขั้นตอนการอนุมัติจากผู้บริหารแบบหลายระดับ พร้อมแสดงสถานะการอนุมัติแบบเรียลไทม์ ผู้ใช้งานสามารถติดตามความคืบหน้าของคำขอได้ตลอดกระบวนการ"
+              ></li>
+              <br>
+              <li
+                data-en="The platform records scan logs for each asset removal by factory location, enabling accurate audit trails and historical verification. It helps eliminate paper-based request forms, improves real-time monitoring efficiency, and strengthens overall IT asset control and transparency."
+                data-th="ระบบมีการบันทึก Log การสแกนการนำอุปกรณ์ออกแยกตามแต่ละโรงงาน เพื่อให้สามารถตรวจสอบย้อนหลังได้อย่างถูกต้องและโปร่งใส ช่วยลดการใช้แบบฟอร์มกระดาษ ลดขั้นตอนงานเอกสาร และเพิ่มประสิทธิภาพในการตรวจสอบและควบคุมทรัพย์สิน IT"
+              ></li>
+            </ul>
+          </div>
+
+          <div class="project-gallery">
+            <img src="images/Asset-Control-1.png" />
+            <img src="images/Asset-Control-2.png" />
+          </div>
         </div>
       </div>
 
@@ -259,6 +456,8 @@
       </div>
     </section>
 
+    
+
     <section class="section" id="experience">
       <h3 data-en="Experience" data-th="ประสบการณ์ทำงาน"></h3>
 
@@ -311,15 +510,21 @@
         <a
           data-en="Email: kiattisakch0908@gmail.com"
           data-th="อีเมล: kiattisakch0908@gmail.com"
-          style="color: white;"
+          style="color: white"
           href="mailto:kiattisakch0908@gmail.com"
         ></a>
         <p data-en="Phone: 095-4093843" data-th="โทร: 095-4093843"></p>
+        <p
+          data-en="Address: 189/2 Moo 3, Tambon Bueng, Amphoe Si Racha, Chonburi 20230"
+          data-th="ที่อยู่: 189/2 หมู่ที่ 3 ต.บึง อ.ศรีราชา จ.ชลบุรี 20230"
+        ></p>
         <a
           class="btn"
           data-en="Download Resume (PDF)"
           data-th="ดาวน์โหลด ประวัติ (PDF)"
-          href="#"
+          href="assets/Resume_Kiattisak_Chaosri.pdf"
+          target="_blank"
+          download="Resume Kiattisak Chaosri.pdf"
         ></a>
       </div>
     </section>
@@ -328,85 +533,72 @@
 
     <script>
       function toggleLang() {
-        document.body.classList.toggle('th-mode')
+        document.body.classList.toggle("th-mode");
 
-        const isTH = document.body.classList.contains('th-mode')
-        localStorage.setItem('lang', isTH ? 'th' : 'en')
+        const isTH = document.body.classList.contains("th-mode");
+        localStorage.setItem("lang", isTH ? "th" : "en");
 
-        document.getElementById('langFlag').src = isTH
-          ? 'icon/en.png'
-          : 'icon/th.png'
+        document.getElementById("langFlag").src = isTH
+          ? "icon/en.png"
+          : "icon/th.png";
       }
 
       window.onload = function () {
-        const lang = localStorage.getItem('lang')
-        if (lang === 'th') {
-          document.body.classList.add('th-mode')
-          document.getElementById('langFlag').src = 'icon/en.png'
+        const lang = localStorage.getItem("lang");
+        if (lang === "th") {
+          document.body.classList.add("th-mode");
+          document.getElementById("langFlag").src = "icon/en.png";
         }
-      }
-    </script>
+      };
 
-    <script>
       function toggleProject(card) {
-        document.querySelectorAll('.project-card').forEach((c) => {
+        document.querySelectorAll(".project-card").forEach((c) => {
           if (c !== card) {
-            c.classList.remove('open')
+            c.classList.remove("open");
           }
-        })
+        });
 
-        card.classList.toggle('open')
+        card.classList.toggle("open");
       }
 
       function toggleMore(e, btn) {
-        e.stopPropagation()
+        e.stopPropagation();
 
-        const detail = btn.closest('.project-detail')
-        const more = detail.querySelector('.more-images')
+        const detail = btn.closest(".project-detail");
+        const more = detail.querySelector(".more-images");
 
-        more.classList.toggle('show')
+        more.classList.toggle("show");
 
-        if (btn.classList.contains('th')) {
-          btn.innerText = more.classList.contains('show')
-            ? 'ซ่อน'
-            : 'แสดงเพิ่มเติม'
+        if (btn.classList.contains("th")) {
+          btn.innerText = more.classList.contains("show")
+            ? "ซ่อน"
+            : "แสดงเพิ่มเติม";
         } else {
-          btn.innerText = more.classList.contains('show')
-            ? 'Show Less'
-            : 'Show More'
+          btn.innerText = more.classList.contains("show")
+            ? "Show Less"
+            : "Show More";
         }
       }
-      //   function toggleProject(e, btn) {
-      //     e.stopPropagation();
 
-      //     const card = btn.closest(".project-card");
-
-      //     document.querySelectorAll(".project-card").forEach((c) => {
-      //       if (c !== card) {
-      //         c.classList.remove("open");
-      //       }
-      //     });
-
-      //     card.classList.toggle("open");
-      //   }
       function toggleProject(el, e) {
         if (e) {
-          e.stopPropagation()
+          e.stopPropagation();
         }
-        const card = el.classList.contains('project-card')
+        const card = el.classList.contains("project-card")
           ? el
-          : el.closest('.project-card')
+          : el.closest(".project-card");
 
-        document.querySelectorAll('.project-card').forEach((c) => {
+        document.querySelectorAll(".project-card").forEach((c) => {
           if (c !== card) {
-            c.classList.remove('open')
+            c.classList.remove("open");
           }
-        })
+        });
 
-        card.classList.toggle('open')
+        card.classList.toggle("open");
       }
     </script>
-    <!-- <script src="js/main.js"></script> -->
     <script src="js/lang.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
+
