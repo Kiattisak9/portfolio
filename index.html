@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiattisak Chaosri — Portfolio</title>
+    <meta
+      name="description"
+      content="Kiattisak Chaosri — IT Application & Infrastructure Support. Internal web systems, approval workflows and IT operations."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav class="nav">
+      <a href="#top" class="logo">KC<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about" data-en="About" data-th="เกี่ยวกับ"></a>
+        <a href="#skills" data-en="Skills" data-th="ทักษะ"></a>
+        <a href="#projects" data-en="Projects" data-th="ผลงาน"></a>
+        <a href="#experience" data-en="Experience" data-th="ประสบการณ์"></a>
+        <a href="#contact" data-en="Contact" data-th="ติดต่อ"></a>
+        <button
+          class="lang-toggle"
+          id="langToggle"
+          aria-label="Switch language"
+        >
+          <span data-lang="th">TH</span><span data-lang="en">EN</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="top">
+      <img src="profile.jpg" class="profile-img" alt="Kiattisak Chaosri" />
+      <h1 data-en="Kiattisak Chaosri" data-th="เกียรติศักดิ์ ชาวศรี"></h1>
+      <h2
+        data-en="IT Application Developer & Infrastructure Support"
+        data-th="นักพัฒนาระบบภายในองค์กร และผู้ดูแลโครงสร้างพื้นฐาน IT"
+      ></h2>
+      <p
+        class="hero-sub"
+        data-en="I build internal web systems that replace paper with approval workflows, dashboards and automatic notifications — and keep the servers, network and CCTV behind them running."
+        data-th="พัฒนาระบบเว็บภายในองค์กรที่เปลี่ยนงานเอกสารกระดาษให้เป็น workflow อนุมัติ แดชบอร์ด และการแจ้งเตือนอัตโนมัติ พร้อมดูแลเซิร์ฟเวอร์ เครือข่าย และกล้อง CCTV ที่อยู่เบื้องหลัง"
+      ></p>
+
+      <div class="hero-actions">
+        <a
+          href="#projects"
+          class="btn"
+          data-en="View Projects"
+          data-th="ดูผลงาน"
+        ></a>
+        <a
+          href="assets/Resume_Kiattisak_Chaosri.pdf"
+          class="btn btn-ghost"
+          target="_blank"
+          download="Resume Kiattisak Chaosri.pdf"
+          data-en="Download Resume"
+          data-th="ดาวน์โหลดประวัติ"
+        ></a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <b id="statProjects">12</b>
+          <span data-en="Programs built" data-th="โปรแกรมที่พัฒนา"></span>
+        </div>
+        <div class="stat">
+          <b>4</b>
+          <span data-en="Factory sites" data-th="โรงงานที่ใช้งาน"></span>
+        </div>
+        <div class="stat">
+          <b>180+</b>
+          <span data-en="Users supported" data-th="ผู้ใช้งานที่ดูแล"></span>
+        </div>
+        <div class="stat">
+          <b>5</b>
+          <span data-en="Years in IT" data-th="ปีในสายงาน IT"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h3 data-en="About Me" data-th="เกี่ยวกับฉัน"></h3>
+      <div class="card about">
+        <p
+          data-en="IT professional at Furukawa Automotive Systems (FAST Group), a multi-factory manufacturer. I specialise in PHP/MySQL and Laravel workflow and approval systems, process automation and operational dashboards, and I also handle the infrastructure side: servers, networks, backup, monitoring and CCTV."
+          data-th="เจ้าหน้าที่ IT ที่ Furukawa Automotive Systems (FAST Group) บริษัทผู้ผลิตที่มีหลายโรงงาน เชี่ยวชาญการพัฒนาระบบ workflow และ approval ด้วย PHP/MySQL และ Laravel ระบบอัตโนมัติ และแดชบอร์ดรายงานผล รวมถึงดูแลโครงสร้างพื้นฐาน เช่น เซิร์ฟเวอร์ เครือข่าย ระบบสำรองข้อมูล การเฝ้าระวัง และ CCTV"
+        ></p>
+        <ul class="highlights">
+          <li>
+            <i class="fa-solid fa-industry"></i>
+            <span
+              data-en="Systems designed for multi-factory use (FAST1, FAST2, FAST3, FLT)"
+              data-th="ออกแบบระบบให้รองรับหลายโรงงาน (FAST1, FAST2, FAST3, FLT)"
+            ></span>
+          </li>
+          <li>
+            <i class="fa-solid fa-diagram-project"></i>
+            <span
+              data-en="Multi-level approval flows with automatic email notification"
+              data-th="ระบบอนุมัติหลายระดับ พร้อมแจ้งเตือนอีเมลอัตโนมัติ"
+            ></span>
+          </li>
+          <li>
+            <i class="fa-solid fa-shield-halved"></i>
+            <span
+              data-en="Security-minded: prepared statements, private file storage, audit logs"
+              data-th="คำนึงถึงความปลอดภัย: prepared statements, private storage, audit log"
+            ></span>
+          </li>
+          <li>
+            <i class="fa-solid fa-microchip"></i>
+            <span
+              data-en="From web apps to Raspberry Pi kiosks and hardware I/O"
+              data-th="ตั้งแต่เว็บแอป ไปจนถึง Raspberry Pi kiosk และอุปกรณ์ I/O"
+            ></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <h3 data-en="Skills" data-th="ทักษะทางเทคนิค"></h3>
+      <div class="grid" id="skillsGrid"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <h3 data-en="Projects" data-th="ผลงาน"></h3>
+
+      <div class="subhead">
+        <i class="fa-solid fa-code"></i>
+        <h4 data-en="Programming" data-th="ด้านการพัฒนาโปรแกรม"></h4>
+      </div>
+      <div class="project-grid" id="devGrid"></div>
+
+      <div class="subhead">
+        <i class="fa-solid fa-server"></i>
+        <h4 data-en="Infrastructure" data-th="ด้านโครงสร้างพื้นฐาน IT"></h4>
+      </div>
+      <div class="project-grid" id="infraGrid"></div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <h3 data-en="Experience" data-th="ประสบการณ์ทำงาน"></h3>
+      <div class="card timeline">
+        <div class="timeline-item">
+          <div class="tl-head">
+            <b>IT Staff — Furukawa Automotive Systems (Thailand)</b>
+            <span
+              class="tl-date"
+              data-en="2022 – Present"
+              data-th="2565 – ปัจจุบัน"
+            ></span>
+          </div>
+          <ul>
+            <li
+              data-en="Design, build and maintain internal web applications used across four factory sites"
+              data-th="ออกแบบ พัฒนา และดูแลระบบเว็บภายในที่ใช้งานในโรงงาน 4 แห่ง"
+            ></li>
+            <li
+              data-en="Support 180+ users: helpdesk, troubleshooting, equipment and accounts"
+              data-th="ดูแลผู้ใช้งานมากกว่า 180 ราย ทั้งงาน helpdesk แก้ไขปัญหา อุปกรณ์ และบัญชีผู้ใช้"
+            ></li>
+            <li
+              data-en="Maintain servers, network, backup and monitoring; CCTV and network installation"
+              data-th="ดูแลเซิร์ฟเวอร์ เครือข่าย ระบบสำรองข้อมูล การเฝ้าระวัง และติดตั้ง CCTV / เครือข่าย"
+            ></li>
+            <li
+              data-en="Automate alerts (LINE, email) and replace paper forms with digital workflows"
+              data-th="ทำระบบแจ้งเตือนอัตโนมัติ (LINE, อีเมล) และเปลี่ยนแบบฟอร์มกระดาษเป็นระบบดิจิทัล"
+            ></li>
+            <li
+              data-en="Contributed to the IT department's ISO 14001 environmental aspect evaluation"
+              data-th="ร่วมจัดทำการประเมินลักษณะปัญหาสิ่งแวดล้อม (ISO 14001) ของแผนก IT"
+            ></li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-head">
+            <b>Assistant Programmer — EsarnDotCom</b>
+            <span
+              class="tl-date"
+              data-en="2021 – 2022"
+              data-th="2564 – 2565"
+            ></span>
+          </div>
+          <ul>
+            <li
+              data-en="Website development and design"
+              data-th="พัฒนาและออกแบบเว็บไซต์"
+            ></li>
+            <li
+              data-en="Software development support"
+              data-th="สนับสนุนงานพัฒนาซอฟต์แวร์"
+            ></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h3 data-en="Contact" data-th="ติดต่อ"></h3>
+      <div class="card contact">
+        <a href="mailto:kiattisakch0908@gmail.com" class="contact-row">
+          <i class="fa-solid fa-envelope"></i> kiattisakch0908@gmail.com
+        </a>
+        <a href="tel:0954093843" class="contact-row">
+          <i class="fa-solid fa-phone"></i> 095-4093843
+        </a>
+        <div class="contact-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <span data-en="Si Racha, Chonburi" data-th="ศรีราชา จ.ชลบุรี"></span>
+        </div>
+        <a
+          class="btn"
+          href="assets/Resume_Kiattisak_Chaosri.pdf"
+          target="_blank"
+          download="Resume Kiattisak Chaosri.pdf"
+          data-en="Download Resume (PDF)"
+          data-th="ดาวน์โหลดประวัติ (PDF)"
+        ></a>
+      </div>
+    </section>
+
+    <div class="footer">© 2026 Kiattisak Chaosri</div>
+
+    <!-- PROJECT MODAL -->
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-box" role="dialog" aria-modal="true">
+        <button class="modal-close" id="modalClose" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox"><img alt="" /></div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
